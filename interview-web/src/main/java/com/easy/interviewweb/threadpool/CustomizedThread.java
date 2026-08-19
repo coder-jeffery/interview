@@ -3,11 +3,12 @@ package com.easy.interviewweb.threadpool;
 import javax.annotation.processing.Generated;
 import java.util.UUID;
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
 public class CustomizedThread {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
         System.out.println("**********************方式一***********************************");
         //CustomizedThread
         CustomizedSubThread customizedSubThread = new CustomizedSubThread();
@@ -42,7 +43,7 @@ public class CustomizedThread {
         Callable<Integer> callable =()-> {
             Thread.sleep(100);
             System.out.println("callable thread");
-            return 100;
+            return 888;
         };
 
         FutureTask<Integer> futureTask = new FutureTask<>(callable);
@@ -53,6 +54,10 @@ public class CustomizedThread {
                 "\nCallable thread id:"+callableThread.threadId()
                 +
                 "\nCallable thread daemon value:"+callableThread.isDaemon());
+
+        //阻塞获取结果
+        Integer res = futureTask.get();
+        System.out.println("//阻塞获取结果: " + res);
     }
 
     //GC 垃圾回收是守护线程  守护线程和用户线程 JVM退出守护线程会被粗暴阻止
@@ -62,6 +67,11 @@ public class CustomizedThread {
      *      日志监控，巡检，定时巡检，日志辅助，JVM退出 暴力杀死守护线程
      *用户线程：
      *      业务工作 JVM必须等用户线程执行完毕退出
+     *
+     *创建线程特点：
+     *      每次新建销毁线程开销大
+     *      线程数量不可控，大量并发会 OOM、CPU 打满
+     *      没有统一管理，没有拒绝策略 ｜ 业务开发几乎不直接 new Thread，优先线程池
      *
      * */
 
