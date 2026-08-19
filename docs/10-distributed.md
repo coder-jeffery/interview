@@ -72,6 +72,8 @@ Nacos：注册 + 配置，AP/CP 可选，要讲客户端缓存与推空保护。
 Gateway：鉴权、路由、限流、灰度。网关不要塞业务。  
 配置中心：敏感配置加密、灰度发布、回滚；忌频繁推导致全军刷新连接池。
 
+组件原理、Feign 超时重试、Sentinel、Seata、一次请求怎么串起来，见 [Spring Cloud](14-spring-cloud.md)。
+
 **追问**  
 - 服务发现 CAP？（Eureka AP；Consul/etcd 偏 CP；Nacos 可选）  
 - 优雅上下线？（摘流量 → 等 in-flight → 停进程；K8s preStop + readiness）

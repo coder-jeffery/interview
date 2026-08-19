@@ -1,7 +1,8 @@
-# Spring / Spring Boot
+# Spring 框架
 
 > 面试权重：必会（中小厂问得更多；大厂会往事务、循环依赖、代理上挖）  
-> 适合层级：所有人
+> 适合层级：所有人  
+> 启动、自动装配、Starter、Actuator 看 [Spring Boot](13-spring-boot.md)；网关/发现/Feign/Sentinel 看 [Spring Cloud](14-spring-cloud.md)。
 
 ## Q1: IoC / DI 解决什么问题？Bean 生命周期
 
@@ -89,10 +90,12 @@ A 实例化后先把自己工厂放进三级缓存，再注入 B；B 需要 A �
 - 拦截器和 AOP 谁先？（Filter → 拦截器 → Controller，AOP 在 Bean 方法上，可能包住 Controller 方法）  
 - 全局异常怎么做？（`@ControllerAdvice` + `@ExceptionHandler`，别在每个 Controller try-catch）
 
-## Q6: Spring Boot 自动装配
+## Q6: Spring Boot 自动装配（摘要）
 
 **30 秒答法**  
 起步依赖引入一堆库；`@SpringBootApplication` = `@Configuration` + `@ComponentScan` + `@EnableAutoConfiguration`。自动装配：`META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports`（Boot 2.7+；老的是 `spring.factories`）列出配置类，配合 `@ConditionalOnClass` / `OnMissingBean` / `OnProperty` 决定生不生效。所以「引入 starter 就有 DataSource」是条件装配，不是魔法。
+
+完整启动链、自定义 Starter、配置优先级、Actuator、Boot 3 见 [Spring Boot](13-spring-boot.md)。
 
 **追问**  
 - 如何自定义 starter？（自动配置类 + 条件 + 配置属性 + imports 文件）  
@@ -110,6 +113,6 @@ A 实例化后先把自己工厂放进三级缓存，再注入 B；B 需要 A �
 - `javax.*` → `jakarta.*`  
 - 可观测性：Micrometer Tracing，替很多老 Sleuth 用法  
 - Native Image（GraalVM）：反射要配置，启动快、内存低，构建复杂  
-- 虚拟线程：嵌入式容器可切虚拟线程执行器（见 Java 新特性章）
+- 虚拟线程：嵌入式容器可切虚拟线程执行器（见 [Java 新特性](05-java-modern.md)）
 
-没做过 Native 就不要展开。
+展开与升级路径见 [Spring Boot Q11](13-spring-boot.md)。没做过 Native 就不要展开。
