@@ -29,7 +29,15 @@
 - 循环依赖：单例 + setter 三级缓存；构造器循环默认失败。
 - `@Transactional` 失效：自调用、非 public、checked 异常、异常被吃、异步线程。
 - 代理自调用不走切面。
-- Boot 自动装配：条件注解 + `AutoConfiguration.imports`。
+- Boot 自动装配：条件注解 + `AutoConfiguration.imports`；自己声明 Bean 可挡住默认 DataSource。
+- Boot 启动：Environment 先于 refresh；`--debug` 看装配报告。
+- 配置越靠近命令行越优先；`@ConfigurationProperties` 优于零散 `@Value`。
+- Actuator：liveness 绑进程，readiness 绑依赖；`env`/`heapdump` 不对公网。
+- Cloud 请求链：Gateway → Nacos + LoadBalancer → Sentinel → Feign。
+- Netflix 对照：Eureka→Nacos，Ribbon→LoadBalancer，Hystrix→Sentinel，Zuul→Gateway。
+- Feign：读写超时分开；写默认不重试；热更新连接池会抖。
+- Nacos 挂了靠本地缓存；推空保护防 503，也可能打到死人。
+- 超时由外到内递减；重试预算全局算，防止雪崩。
 
 ## MySQL
 

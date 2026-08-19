@@ -20,12 +20,12 @@
 ## 学习路径
 
 ```text
-校招 / 初级          Java 基础 → 集合 → MySQL → 网络 → Spring 入门
-中级（3–5 年）       + 并发 → Redis → Spring 事务/循环依赖 → 场景题
-高级（5 年+）        + JVM 调优 → 分布式 → MQ 可靠性 → 项目深挖
+校招 / 初级          Java 基础 → 集合 → MySQL → 网络 → Spring / Boot 入门
+中级（3–5 年）       + 并发 → Redis → Spring 事务/循环依赖 → Boot 装配/配置 → 场景题
+高级（5 年+）        + JVM 调优 → Spring Cloud 故障治理 → MQ 可靠性 → 项目深挖
 ```
 
-**投入优先级（多数岗位）：** MySQL + Redis ≥ Java 集合/并发 > JVM > Spring 原理 > 微服务组件名。
+**投入优先级（多数岗位）：** MySQL + Redis ≥ Java 集合/并发 > JVM > Spring 原理 > Boot 装配 > Cloud 组件名。
 
 ## 目录
 
@@ -45,7 +45,9 @@
 
 ### 框架与存储
 
-- [Spring / Spring Boot](docs/06-spring.md) · 必会
+- [Spring 框架](docs/06-spring.md) · 必会
+- [Spring Boot](docs/13-spring-boot.md) · 必会
+- [Spring Cloud](docs/14-spring-cloud.md) · 高频
 - [MySQL](docs/07-mysql.md) · 必会
 - [Redis](docs/08-redis.md) · 必会
 
