@@ -1,5 +1,13 @@
 
-
 spring:
   aop:
     auto: true
+
+#app:
+#  schedule:
+#    enable: false
+
+
+task:
+  cron: 0/10 * * * * ?
+

@@ -13,7 +13,15 @@ public class TestController {
 
     @GetMapping("/index")
     public String index(){
-        bizService.doBiz();
-        return "hello world";
+        System.out.println("exec start :" + System.currentTimeMillis());
+        bizService.doAsyncTask();
+        return "hello world :"+System.currentTimeMillis();
+    }
+
+    @GetMapping("/async")
+    public String async(){
+        System.out.println("Step 1 : async method: " + System.currentTimeMillis());
+        bizService.execOrder();
+        return "Step 1 : create order success! time:"+System.currentTimeMillis();
     }
 }
