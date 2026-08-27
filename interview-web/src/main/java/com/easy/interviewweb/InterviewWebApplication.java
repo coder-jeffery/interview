@@ -14,5 +14,4 @@ public class InterviewWebApplication {
 		SpringApplication.run(InterviewWebApplication.class, args);
 		log.info("app end <<< , use times :{}", System.currentTimeMillis() - start);
 	}
-
 }
