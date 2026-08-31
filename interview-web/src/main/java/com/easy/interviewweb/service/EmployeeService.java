@@ -47,4 +47,8 @@ public class EmployeeService {
                 .build();
     }
 
+    public String protobuf(){
+        return "";
+    }
+
 }

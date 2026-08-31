@@ -5,4 +5,10 @@ Java进程：
         线程：CPU调度最小单位；
         JVM虚拟机：
             同一个进程共享堆内存，栈内存每个线程独享。
-        
+API:
+    Restful架构：
+        面向资源方式 http/json
+    RPC架构：
+        面向方法调用方式 http2二进制
+数据格式：
+    json/xml/二进制/avro/protobuf/yaml/Thrift

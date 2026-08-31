@@ -29,4 +29,9 @@ public class EmployeeController {
     public String jackson(){
         return  employeeService.jackson();
     }
+
+    @GetMapping("/protobuf")
+    public String protobuf(){
+        return employeeService.protobuf();
+    }
 }
