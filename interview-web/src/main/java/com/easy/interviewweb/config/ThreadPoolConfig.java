@@ -40,6 +40,10 @@ public class ThreadPoolConfig {
         executor.setThreadNamePrefix("customized-task-async-thread-");//线程名前缀
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());//拒绝策略
         executor.initialize();//初始化
+        // 停机时等待正在执行任务完成
+        executor.setWaitForTasksToCompleteOnShutdown(true);
+        // 线程池等待超时
+        executor.setAwaitTerminationSeconds(25);
         return executor;
     }
 }

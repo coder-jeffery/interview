@@ -1,0 +1,16 @@
+.gradle
+build
+.idea
+.vscode
+*.iml
+*.ipr
+*.iws
+out
+bin
+.git
+.gitignore
+.gitattributes
+HELP.md
+*.md
+.DS_Store
+logs/

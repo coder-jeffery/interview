@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// 生成Java的包名
+option java_package = "com.easy.interviewweb.entity.proto";
+// 外部类名
+option java_outer_classname = "EmployeeProto";
+
+message Employee {
+  int64 id = 1;
+  string name = 2;
+  double salary = 3;
+  string nickname = 4;
+  string address = 5;
+  string email = 6;
+  string birthday =7;
+  string job =8;
+}

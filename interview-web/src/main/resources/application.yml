@@ -1,3 +1,13 @@
 spring:
   profiles:
     active: dev
+
+logging:
+  file:
+    name: ${LOG_PATH:./logs}/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: 50MB
+      max-history: 15
+      total-size-cap: 2GB
+      file-name-pattern: ${LOG_PATH:./logs}/${spring.application.name}.%d{yyyy-MM-dd}.%i.log.gz
