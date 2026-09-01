@@ -1,5 +1,20 @@
 
+server:
+  shutdown: graceful
+  # graceful=优雅停机；immediate=立即关闭（默认）
+
 spring:
+  api-docs:
+    enabled: true   # 是否开启openapi文档
+    path: /v3/api-docs
+    swagger-ui:
+      enabled: true
+      path: /swagger-ui/index.html
+      operationsSorter: method  # 接口按http方法排序
+      tagsSorter: alpha         # tag按字母排序
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+    # 停机阶段最大等待超时，默认30s；建议根据业务P99耗时设置，如业务最长20s就设30‑40s
   aop:
     auto: true
 

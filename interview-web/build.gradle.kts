@@ -15,6 +15,7 @@ java {
 }
 
 repositories {
+	maven("https://maven.aliyun.com/repository/public")
 	mavenCentral()
 }
 
@@ -28,6 +29,8 @@ dependencies {
 	implementation("com.fasterxml.jackson.core:jackson-databind:2.22.2")
 	// Source: https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
 	implementation("com.google.protobuf:protobuf-java:4.33.6")
+	// Source: https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.3")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
