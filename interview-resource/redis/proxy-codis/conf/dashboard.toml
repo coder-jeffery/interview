@@ -1,0 +1,13 @@
+coordinator_name = "zookeeper"
+coordinator_addr = "zookeeper:2181"
+product_name = "codis-demo"
+product_auth = ""
+admin_addr = "0.0.0.0:18080"
+migration_method = "semi-async"
+migration_parallel_slots = 100
+migration_timeout = "30s"
+sentinel_client_timeout = "10s"
+sentinel_quorum = 2
+sentinel_parallel_syncs = 1
+sentinel_down_after = "30s"
+sentinel_failover_timeout = "5m"
