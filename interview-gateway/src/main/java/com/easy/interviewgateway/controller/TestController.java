@@ -15,4 +15,9 @@ public class TestController {
     public String test(){
         return "打印参数：" + "响应时间:" + nacosBean.getTimeout() + " 标题:  " + nacosBean.getTitle();
     }
+
+    @GetMapping("/api/hello")
+    public String hello(){
+        return "来自interview-gateway实例";
+    }
 }

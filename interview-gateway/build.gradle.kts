@@ -34,6 +34,8 @@ dependencies {
     implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2025.1.0.0")
     // Source: https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-config
     implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config:2025.1.0.0")
+    // Source: https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-loadbalancer
+    implementation("org.springframework.cloud:spring-cloud-starter-loadbalancer:5.0.2")
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-webflux-test")

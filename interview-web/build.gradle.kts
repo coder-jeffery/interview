@@ -31,6 +31,12 @@ dependencies {
 	implementation("com.google.protobuf:protobuf-java:4.33.6")
 	// Source: https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.3")
+	// Source: https://mvnrepository.com/artifact/com.alibaba.cloud/spring-cloud-starter-alibaba-nacos-discovery
+	implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2025.1.0.0")
+	// Source: https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign
+	implementation("org.springframework.cloud:spring-cloud-starter-openfeign:5.0.3")
+	// Source: https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-loadbalancer
+	implementation("org.springframework.cloud:spring-cloud-starter-loadbalancer:5.0.2")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

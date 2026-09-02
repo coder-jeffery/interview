@@ -6,6 +6,5 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class NacosConfig {
     private String title;
     private Integer timeout;
-
     // getter setter
 }

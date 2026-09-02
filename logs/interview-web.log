@@ -1,0 +1,554 @@
+2026-09-02T16:55:16.388+08:00  INFO 20345 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Starting InterviewWebApplication using Java 24.0.1 with PID 20345 (/Users/jeffery/Documents/workspace/github/interview/interview-web/build/classes/java/main started by jeffery in /Users/jeffery/Documents/workspace/github/interview)
+2026-09-02T16:55:16.389+08:00  INFO 20345 --- [interview-web] [main] c.e.i.InterviewWebApplication            : The following 1 profile is active: "dev"
+2026-09-02T16:55:16.773+08:00  INFO 20345 --- [interview-web] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b19ae8d-3867-3dce-bdfe-ca30f1332b55
+2026-09-02T16:55:16.783+08:00  WARN 20345 --- [interview-web] [main] trationDelegate$BeanPostProcessorChecker : Bean 'scheduleBootConfig' of type [com.easy.interviewweb.config.ScheduleBootConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [scheduledAnnotationBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-02T16:55:16.932+08:00  INFO 20345 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-02T16:55:16.940+08:00  INFO 20345 --- [interview-web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-02T16:55:16.940+08:00  INFO 20345 --- [interview-web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-02T16:55:16.965+08:00  INFO 20345 --- [interview-web] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 556 ms
+2026-09-02T16:55:19.002+08:00  INFO 20345 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-02T16:55:19.009+08:00  INFO 20345 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2026-09-02T16:55:19.009+08:00  INFO 20345 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2026-09-02T16:55:19.009+08:00  INFO 20345 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2026-09-02T16:55:19.070+08:00  INFO 20345 --- [interview-web] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2026-09-02T16:55:19.070+08:00  INFO 20345 --- [interview-web] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2026-09-02T16:55:19.341+08:00  INFO 20345 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2026-09-02T16:55:19.342+08:00  INFO 20345 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2026-09-02T16:55:19.342+08:00  INFO 20345 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2026-09-02T16:55:19.343+08:00  INFO 20345 --- [interview-web] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2026-09-02T16:55:19.364+08:00  INFO 20345 --- [interview-web] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT interview-web 192.168.1.178:8082 register finished
+2026-09-02T16:55:19.374+08:00  INFO 20345 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Started InterviewWebApplication in 3.227 seconds (process running for 3.606)
+2026-09-02T16:55:19.375+08:00  WARN 20345 --- [interview-web] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-02T16:55:19.375+08:00  WARN 20345 --- [interview-web] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-02T16:55:19.376+08:00  INFO 20345 --- [interview-web] [main] c.e.i.InterviewWebApplication            : app end <<< , use times :3362
+2026-09-02T16:59:37.690+08:00  INFO 20345 --- [interview-web] [Thread-5] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2026-09-02T16:59:37.690+08:00  INFO 20345 --- [interview-web] [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2026-09-02T16:59:37.690+08:00  INFO 20345 --- [interview-web] [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2026-09-02T16:59:37.690+08:00  INFO 20345 --- [interview-web] [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Completed destruction of Publisher
+2026-09-02T16:59:37.690+08:00  INFO 20345 --- [interview-web] [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Completed destruction of HttpClient
+2026-09-02T16:59:37.690+08:00  INFO 20345 --- [interview-web] [Thread-5] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Completed destruction of ThreadPool
+2026-09-02T16:59:37.691+08:00  INFO 20345 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2026-09-02T16:59:37.698+08:00  INFO 20345 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2026-09-02T16:59:47.702+08:00  INFO 20345 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.r.NacosGracefulShutdownDelegate  : Nacos client graceful shutdown has been executed successfully. Graceful shutdown wait time is 10000
+2026-09-02T16:59:47.704+08:00  INFO 20345 --- [interview-web] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-02T16:59:49.720+08:00  INFO 20345 --- [interview-web] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-02T16:59:49.761+08:00  WARN 20345 --- [interview-web] [SpringApplicationShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Timed out while waiting for executor 'taskScheduler' to terminate
+2026-09-02T16:59:51.698+08:00  INFO 20577 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Starting InterviewWebApplication using Java 24.0.1 with PID 20577 (/Users/jeffery/Documents/workspace/github/interview/interview-web/build/classes/java/main started by jeffery in /Users/jeffery/Documents/workspace/github/interview)
+2026-09-02T16:59:51.699+08:00  INFO 20577 --- [interview-web] [main] c.e.i.InterviewWebApplication            : The following 1 profile is active: "dev"
+2026-09-02T16:59:52.114+08:00  INFO 20577 --- [interview-web] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b19ae8d-3867-3dce-bdfe-ca30f1332b55
+2026-09-02T16:59:52.124+08:00  WARN 20577 --- [interview-web] [main] trationDelegate$BeanPostProcessorChecker : Bean 'scheduleBootConfig' of type [com.easy.interviewweb.config.ScheduleBootConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [scheduledAnnotationBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-02T16:59:52.253+08:00  INFO 20577 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-02T16:59:52.262+08:00  INFO 20577 --- [interview-web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-02T16:59:52.262+08:00  INFO 20577 --- [interview-web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-02T16:59:52.285+08:00  INFO 20577 --- [interview-web] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 559 ms
+2026-09-02T16:59:52.332+08:00  WARN 20577 --- [interview-web] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testController': Unsatisfied dependency expressed through field 'nacosFeign': No qualifying bean of type 'com.easy.interviewweb.feign.NacosFeign' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-09-02T16:59:52.334+08:00  INFO 20577 --- [interview-web] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-02T16:59:52.343+08:00  INFO 20577 --- [interview-web] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-02T16:59:52.350+08:00 ERROR 20577 --- [interview-web] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field nacosFeign in com.easy.interviewweb.controller.TestController required a bean of type 'com.easy.interviewweb.feign.NacosFeign' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.easy.interviewweb.feign.NacosFeign' in your configuration.
+
+2026-09-02T17:01:14.287+08:00  INFO 20645 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Starting InterviewWebApplication using Java 24.0.1 with PID 20645 (/Users/jeffery/Documents/workspace/github/interview/interview-web/build/classes/java/main started by jeffery in /Users/jeffery/Documents/workspace/github/interview)
+2026-09-02T17:01:14.288+08:00  INFO 20645 --- [interview-web] [main] c.e.i.InterviewWebApplication            : The following 1 profile is active: "dev"
+2026-09-02T17:01:14.692+08:00  INFO 20645 --- [interview-web] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=56eb385b-353f-3e9f-9bd6-a55a282ff2bc
+2026-09-02T17:01:14.702+08:00  WARN 20645 --- [interview-web] [main] trationDelegate$BeanPostProcessorChecker : Bean 'scheduleBootConfig' of type [com.easy.interviewweb.config.ScheduleBootConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [scheduledAnnotationBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-02T17:01:14.836+08:00  INFO 20645 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-02T17:01:14.844+08:00  INFO 20645 --- [interview-web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-02T17:01:14.844+08:00  INFO 20645 --- [interview-web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-02T17:01:14.867+08:00  INFO 20645 --- [interview-web] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 554 ms
+2026-09-02T17:01:15.002+08:00  INFO 20645 --- [interview-web] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'interview-gateway' URL not provided. Will try picking an instance via load-balancing.
+2026-09-02T17:01:15.003+08:00  WARN 20645 --- [interview-web] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testController': Unsatisfied dependency expressed through field 'nacosFeign': Error creating bean with name 'com.easy.interviewweb.feign.NacosFeign': FactoryBean threw exception on object creation
+2026-09-02T17:01:15.004+08:00  WARN 20645 --- [interview-web] [main] s.c.a.AnnotationConfigApplicationContext : Exception thrown from ApplicationListener handling ContextClosedEvent
+
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'nacosGracefulShutdownDelegate': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:301) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.retrieveApplicationListeners(AbstractApplicationEventMulticaster.java:266) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.event.AbstractApplicationEventMulticaster.getApplicationListeners(AbstractApplicationEventMulticaster.java:222) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:140) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:448) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:381) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1190) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1153) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:116) ~[spring-cloud-context-5.0.3.jar:5.0.3]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:209) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:795) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:745) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1507) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:704) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1500) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1246) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:644) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.easy.interviewweb.InterviewWebApplication.main(InterviewWebApplication.java:18) ~[main/:na]
+
+2026-09-02T17:01:15.006+08:00  INFO 20645 --- [interview-web] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-09-02T17:01:15.013+08:00  INFO 20645 --- [interview-web] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-02T17:01:15.018+08:00 ERROR 20645 --- [interview-web] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'testController': Unsatisfied dependency expressed through field 'nacosFeign': Error creating bean with name 'com.easy.interviewweb.feign.NacosFeign': FactoryBean threw exception on object creation
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:748) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:493) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1444) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:602) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.8.jar:7.0.8]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.0.jar:4.1.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.0.jar:4.1.0]
+	at com.easy.interviewweb.InterviewWebApplication.main(InterviewWebApplication.java:18) ~[main/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.easy.interviewweb.feign.NacosFeign': FactoryBean threw exception on object creation
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:209) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:149) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1879) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1302) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:343) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:229) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1769) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.8.jar:7.0.8]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 22 common frames omitted
+Caused by: java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:441) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:486) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:461) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:203) ~[spring-beans-7.0.8.jar:7.0.8]
+	... 31 common frames omitted
+
+2026-09-02T17:03:42.366+08:00  INFO 20884 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Starting InterviewWebApplication using Java 24.0.1 with PID 20884 (/Users/jeffery/Documents/workspace/github/interview/interview-web/build/classes/java/main started by jeffery in /Users/jeffery/Documents/workspace/github/interview)
+2026-09-02T17:03:42.368+08:00  INFO 20884 --- [interview-web] [main] c.e.i.InterviewWebApplication            : The following 1 profile is active: "dev"
+2026-09-02T17:03:42.845+08:00  INFO 20884 --- [interview-web] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=30b6d24b-e721-3ef9-9dea-55d088f68b29
+2026-09-02T17:03:42.857+08:00  WARN 20884 --- [interview-web] [main] trationDelegate$BeanPostProcessorChecker : Bean 'scheduleBootConfig' of type [com.easy.interviewweb.config.ScheduleBootConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [scheduledAnnotationBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-02T17:03:43.009+08:00  INFO 20884 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-02T17:03:43.019+08:00  INFO 20884 --- [interview-web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-02T17:03:43.019+08:00  INFO 20884 --- [interview-web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-02T17:03:43.046+08:00  INFO 20884 --- [interview-web] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 655 ms
+2026-09-02T17:03:43.188+08:00  INFO 20884 --- [interview-web] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'interview-gateway' URL not provided. Will try picking an instance via load-balancing.
+2026-09-02T17:03:43.478+08:00  WARN 20884 --- [interview-web] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-02T17:03:43.507+08:00  INFO 20884 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-02T17:03:43.513+08:00  INFO 20884 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2026-09-02T17:03:43.514+08:00  INFO 20884 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2026-09-02T17:03:43.514+08:00  INFO 20884 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2026-09-02T17:03:43.551+08:00  INFO 20884 --- [interview-web] [Thread-3] c.a.n.c.a.r.identify.CredentialWatcher   : null No credential found
+2026-09-02T17:03:43.573+08:00  INFO 20884 --- [interview-web] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2026-09-02T17:03:43.573+08:00  INFO 20884 --- [interview-web] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2026-09-02T17:03:43.845+08:00  INFO 20884 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2026-09-02T17:03:43.846+08:00  INFO 20884 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2026-09-02T17:03:43.846+08:00  INFO 20884 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2026-09-02T17:03:43.846+08:00  INFO 20884 --- [interview-web] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2026-09-02T17:03:43.877+08:00  INFO 20884 --- [interview-web] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT interview-web 192.168.1.178:8082 register finished
+2026-09-02T17:03:43.888+08:00  INFO 20884 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Started InterviewWebApplication in 1.748 seconds (process running for 2.178)
+2026-09-02T17:03:43.894+08:00  WARN 20884 --- [interview-web] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-02T17:03:43.894+08:00  WARN 20884 --- [interview-web] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-02T17:03:43.894+08:00  INFO 20884 --- [interview-web] [main] c.e.i.InterviewWebApplication            : app end <<< , use times :1904
+2026-09-02T17:04:01.093+08:00  INFO 20884 --- [interview-web] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-02T17:04:01.093+08:00  INFO 20884 --- [interview-web] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-02T17:04:01.095+08:00  INFO 20884 --- [interview-web] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-02T17:04:28.235+08:00  WARN 20884 --- [interview-web] [http-nio-8082-exec-4] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: interview-gateway
+2026-09-02T17:04:28.237+08:00  WARN 20884 --- [interview-web] [http-nio-8082-exec-4] .s.c.o.l.FeignBlockingLoadBalancerClient : Load balancer does not contain an instance for the service interview-gateway
+2026-09-02T17:04:28.240+08:00 ERROR 20884 --- [interview-web] [http-nio-8082-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$ServiceUnavailable: [503] during [GET] to [http://interview-gateway/api/hello] [NacosFeign#hello()]: [Load balancer does not contain an instance for the service interview-gateway]] with root cause
+
+feign.FeignException$ServiceUnavailable: [503] during [GET] to [http://interview-gateway/api/hello] [NacosFeign#hello()]: [Load balancer does not contain an instance for the service interview-gateway]
+	at feign.FeignException.serverErrorStatus(FeignException.java:287) ~[feign-core-13.6.1.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:226) ~[feign-core-13.6.1.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:213) ~[feign-core-13.6.1.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:103) ~[feign-core-13.6.1.jar:na]
+	at feign.InvocationContext.decodeError(InvocationContext.java:133) ~[feign-core-13.6.1.jar:na]
+	at feign.InvocationContext.proceed(InvocationContext.java:80) ~[feign-core-13.6.1.jar:na]
+	at feign.ResponseHandler.handleResponse(ResponseHandler.java:69) ~[feign-core-13.6.1.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:109) ~[feign-core-13.6.1.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.1.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.1.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy82.hello(Unknown Source) ~[na:na]
+	at com.easy.interviewweb.controller.TestController.hello(TestController.java:34) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+2026-09-02T17:08:02.208+08:00  INFO 20884 --- [interview-web] [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2026-09-02T17:08:02.208+08:00  INFO 20884 --- [interview-web] [Thread-5] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2026-09-02T17:08:02.208+08:00  INFO 20884 --- [interview-web] [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2026-09-02T17:08:02.209+08:00  INFO 20884 --- [interview-web] [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Completed destruction of Publisher
+2026-09-02T17:08:02.209+08:00  INFO 20884 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2026-09-02T17:08:02.209+08:00  INFO 20884 --- [interview-web] [Thread-5] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Completed destruction of ThreadPool
+2026-09-02T17:08:02.209+08:00  INFO 20884 --- [interview-web] [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Completed destruction of HttpClient
+2026-09-02T17:08:02.212+08:00  INFO 20884 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2026-09-02T17:08:12.217+08:00  INFO 20884 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.r.NacosGracefulShutdownDelegate  : Nacos client graceful shutdown has been executed successfully. Graceful shutdown wait time is 10000
+2026-09-02T17:08:12.222+08:00  INFO 20884 --- [interview-web] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-02T17:08:14.235+08:00  INFO 20884 --- [interview-web] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-02T17:08:14.274+08:00  WARN 20884 --- [interview-web] [SpringApplicationShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Timed out while waiting for executor 'taskScheduler' to terminate
+2026-09-02T17:08:16.280+08:00  INFO 21166 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Starting InterviewWebApplication using Java 24.0.1 with PID 21166 (/Users/jeffery/Documents/workspace/github/interview/interview-web/build/classes/java/main started by jeffery in /Users/jeffery/Documents/workspace/github/interview)
+2026-09-02T17:08:16.282+08:00  INFO 21166 --- [interview-web] [main] c.e.i.InterviewWebApplication            : The following 1 profile is active: "dev"
+2026-09-02T17:08:16.742+08:00  INFO 21166 --- [interview-web] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a34cdd08-b57a-3963-801e-9cdcc346ae1e
+2026-09-02T17:08:16.753+08:00  WARN 21166 --- [interview-web] [main] trationDelegate$BeanPostProcessorChecker : Bean 'scheduleBootConfig' of type [com.easy.interviewweb.config.ScheduleBootConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [scheduledAnnotationBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-02T17:08:16.908+08:00  INFO 21166 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-02T17:08:16.917+08:00  INFO 21166 --- [interview-web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-02T17:08:16.917+08:00  INFO 21166 --- [interview-web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-02T17:08:16.944+08:00  INFO 21166 --- [interview-web] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 637 ms
+2026-09-02T17:08:17.084+08:00  INFO 21166 --- [interview-web] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'interview-gateway' URL not provided. Will try picking an instance via load-balancing.
+2026-09-02T17:08:17.378+08:00  WARN 21166 --- [interview-web] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-02T17:08:17.437+08:00  INFO 21166 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-02T17:08:17.444+08:00  INFO 21166 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2026-09-02T17:08:17.445+08:00  INFO 21166 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2026-09-02T17:08:17.445+08:00  INFO 21166 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2026-09-02T17:08:17.482+08:00  INFO 21166 --- [interview-web] [Thread-3] c.a.n.c.a.r.identify.CredentialWatcher   : null No credential found
+2026-09-02T17:08:17.506+08:00  INFO 21166 --- [interview-web] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2026-09-02T17:08:17.506+08:00  INFO 21166 --- [interview-web] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2026-09-02T17:08:17.788+08:00  INFO 21166 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2026-09-02T17:08:17.789+08:00  INFO 21166 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2026-09-02T17:08:17.789+08:00  INFO 21166 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2026-09-02T17:08:17.789+08:00  INFO 21166 --- [interview-web] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2026-09-02T17:08:17.815+08:00  INFO 21166 --- [interview-web] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP interview-web 192.168.1.178:8082 register finished
+2026-09-02T17:08:17.828+08:00  INFO 21166 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Started InterviewWebApplication in 1.77 seconds (process running for 2.216)
+2026-09-02T17:08:17.833+08:00  WARN 21166 --- [interview-web] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-02T17:08:17.833+08:00  WARN 21166 --- [interview-web] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-02T17:08:17.834+08:00  INFO 21166 --- [interview-web] [main] c.e.i.InterviewWebApplication            : app end <<< , use times :1915
+2026-09-02T17:08:49.982+08:00  INFO 21166 --- [interview-web] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-02T17:08:49.982+08:00  INFO 21166 --- [interview-web] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-02T17:08:49.984+08:00  INFO 21166 --- [interview-web] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-02T17:09:35.192+08:00  INFO 21166 --- [interview-web] [http-nio-8082-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 53 ms
+2026-09-02T17:09:50.071+08:00 ERROR 21166 --- [interview-web] [http-nio-8082-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.RetryableException: Read timed out executing GET http://interview-gateway/api/hello] with root cause
+
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:277) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:303) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:345) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:790) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:983) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:970) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:289) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:330) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:388) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:795) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:727) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1391) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1301) ~[na:na]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:493) ~[na:na]
+	at feign.Client$Default.convertResponse(Client.java:114) ~[feign-core-13.6.1.jar:na]
+	at feign.Client$Default.execute(Client.java:110) ~[feign-core-13.6.1.jar:na]
+	at org.springframework.cloud.openfeign.loadbalancer.LoadBalancerUtils.executeWithLoadBalancerLifecycleProcessing(LoadBalancerUtils.java:56) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at org.springframework.cloud.openfeign.loadbalancer.LoadBalancerUtils.executeWithLoadBalancerLifecycleProcessing(LoadBalancerUtils.java:91) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at org.springframework.cloud.openfeign.loadbalancer.FeignBlockingLoadBalancerClient.execute(FeignBlockingLoadBalancerClient.java:110) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:92) ~[feign-core-13.6.1.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.1.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.1.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy82.hello(Unknown Source) ~[na:na]
+	at com.easy.interviewweb.controller.TestController.hello(TestController.java:34) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+2026-09-02T17:10:14.697+08:00 ERROR 21166 --- [interview-web] [http-nio-8082-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.RetryableException: Read timed out executing GET http://interview-gateway/api/hello] with root cause
+
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:277) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:303) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:345) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:790) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:983) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:970) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:289) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:330) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:388) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:795) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:727) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1391) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1301) ~[na:na]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:493) ~[na:na]
+	at feign.Client$Default.convertResponse(Client.java:114) ~[feign-core-13.6.1.jar:na]
+	at feign.Client$Default.execute(Client.java:110) ~[feign-core-13.6.1.jar:na]
+	at org.springframework.cloud.openfeign.loadbalancer.LoadBalancerUtils.executeWithLoadBalancerLifecycleProcessing(LoadBalancerUtils.java:56) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at org.springframework.cloud.openfeign.loadbalancer.LoadBalancerUtils.executeWithLoadBalancerLifecycleProcessing(LoadBalancerUtils.java:91) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at org.springframework.cloud.openfeign.loadbalancer.FeignBlockingLoadBalancerClient.execute(FeignBlockingLoadBalancerClient.java:110) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:92) ~[feign-core-13.6.1.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.1.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.1.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy82.hello(Unknown Source) ~[na:na]
+	at com.easy.interviewweb.controller.TestController.hello(TestController.java:34) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+2026-09-02T17:10:41.271+08:00 ERROR 21166 --- [interview-web] [http-nio-8082-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.RetryableException: Read timed out executing GET http://interview-gateway/api/hello] with root cause
+
+java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:277) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:303) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:345) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:790) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:983) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:970) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:289) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:330) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:388) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:795) ~[na:na]
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:727) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1391) ~[na:na]
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1301) ~[na:na]
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:493) ~[na:na]
+	at feign.Client$Default.convertResponse(Client.java:114) ~[feign-core-13.6.1.jar:na]
+	at feign.Client$Default.execute(Client.java:110) ~[feign-core-13.6.1.jar:na]
+	at org.springframework.cloud.openfeign.loadbalancer.LoadBalancerUtils.executeWithLoadBalancerLifecycleProcessing(LoadBalancerUtils.java:56) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at org.springframework.cloud.openfeign.loadbalancer.LoadBalancerUtils.executeWithLoadBalancerLifecycleProcessing(LoadBalancerUtils.java:91) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at org.springframework.cloud.openfeign.loadbalancer.FeignBlockingLoadBalancerClient.execute(FeignBlockingLoadBalancerClient.java:110) ~[spring-cloud-openfeign-core-5.0.3.jar:5.0.3]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:92) ~[feign-core-13.6.1.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.6.1.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.6.1.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy82.hello(Unknown Source) ~[na:na]
+	at com.easy.interviewweb.controller.TestController.hello(TestController.java:34) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.8.jar:7.0.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.22.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.8.jar:7.0.8]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.22.jar:11.0.22]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+2026-09-02T17:14:19.779+08:00  INFO 21166 --- [interview-web] [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2026-09-02T17:14:19.779+08:00  INFO 21166 --- [interview-web] [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2026-09-02T17:14:19.779+08:00  INFO 21166 --- [interview-web] [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Completed destruction of Publisher
+2026-09-02T17:14:19.779+08:00  INFO 21166 --- [interview-web] [Thread-5] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2026-09-02T17:14:19.779+08:00  INFO 21166 --- [interview-web] [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Completed destruction of HttpClient
+2026-09-02T17:14:19.780+08:00  INFO 21166 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2026-09-02T17:14:19.780+08:00  INFO 21166 --- [interview-web] [Thread-5] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Completed destruction of ThreadPool
+2026-09-02T17:14:19.783+08:00  INFO 21166 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2026-09-02T17:14:29.791+08:00  INFO 21166 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.r.NacosGracefulShutdownDelegate  : Nacos client graceful shutdown has been executed successfully. Graceful shutdown wait time is 10000
+2026-09-02T17:14:29.794+08:00  INFO 21166 --- [interview-web] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-02T17:14:31.804+08:00  INFO 21166 --- [interview-web] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-02T17:14:33.593+08:00  INFO 21525 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Starting InterviewWebApplication using Java 24.0.1 with PID 21525 (/Users/jeffery/Documents/workspace/github/interview/interview-web/build/classes/java/main started by jeffery in /Users/jeffery/Documents/workspace/github/interview)
+2026-09-02T17:14:33.595+08:00  INFO 21525 --- [interview-web] [main] c.e.i.InterviewWebApplication            : The following 1 profile is active: "dev"
+2026-09-02T17:14:34.056+08:00  INFO 21525 --- [interview-web] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a34cdd08-b57a-3963-801e-9cdcc346ae1e
+2026-09-02T17:14:34.067+08:00  WARN 21525 --- [interview-web] [main] trationDelegate$BeanPostProcessorChecker : Bean 'scheduleBootConfig' of type [com.easy.interviewweb.config.ScheduleBootConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [scheduledAnnotationBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-09-02T17:14:34.223+08:00  INFO 21525 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-02T17:14:34.232+08:00  INFO 21525 --- [interview-web] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-02T17:14:34.232+08:00  INFO 21525 --- [interview-web] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-09-02T17:14:34.258+08:00  INFO 21525 --- [interview-web] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 637 ms
+2026-09-02T17:14:34.395+08:00  INFO 21525 --- [interview-web] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'interview-gateway' URL not provided. Will try picking an instance via load-balancing.
+2026-09-02T17:14:46.100+08:00  WARN 21525 --- [interview-web] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-09-02T17:14:46.135+08:00  INFO 21525 --- [interview-web] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-02T17:14:46.143+08:00  INFO 21525 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2026-09-02T17:14:46.144+08:00  INFO 21525 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2026-09-02T17:14:46.144+08:00  INFO 21525 --- [interview-web] [main] c.a.nacos.client.logging.NacosLogging    : Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2026-09-02T17:14:46.171+08:00  INFO 21525 --- [interview-web] [Thread-3] c.a.n.c.a.r.identify.CredentialWatcher   : null No credential found
+2026-09-02T17:14:46.204+08:00  INFO 21525 --- [interview-web] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2026-09-02T17:14:46.204+08:00  INFO 21525 --- [interview-web] [main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2026-09-02T17:14:46.488+08:00  INFO 21525 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to get current node abilities...
+2026-09-02T17:14:46.490+08:00  INFO 21525 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2026-09-02T17:14:46.490+08:00  INFO 21525 --- [interview-web] [main] c.a.n.c.a.AbstractAbilityControlManager  : Initialize current abilities finish...
+2026-09-02T17:14:46.491+08:00  INFO 21525 --- [interview-web] [main] c.a.n.c.a.d.NacosAbilityManagerHolder    : [AbilityControlManager] Successfully initialize AbilityControlManager
+2026-09-02T17:14:46.520+08:00  INFO 21525 --- [interview-web] [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP interview-web 192.168.1.178:8082 register finished
+2026-09-02T17:14:46.530+08:00  INFO 21525 --- [interview-web] [main] c.e.i.InterviewWebApplication            : Started InterviewWebApplication in 13.172 seconds (process running for 13.62)
+2026-09-02T17:14:46.540+08:00  WARN 21525 --- [interview-web] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-02T17:14:46.540+08:00  WARN 21525 --- [interview-web] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-02T17:14:46.541+08:00  INFO 21525 --- [interview-web] [main] c.e.i.InterviewWebApplication            : app end <<< , use times :13334
+2026-09-02T17:14:49.670+08:00  INFO 21525 --- [interview-web] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-02T17:14:49.670+08:00  INFO 21525 --- [interview-web] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-02T17:14:49.671+08:00  INFO 21525 --- [interview-web] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-02T17:14:50.962+08:00  INFO 21525 --- [interview-web] [http-nio-8082-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 49 ms
+2026-09-02T17:15:51.855+08:00  INFO 21525 --- [interview-web] [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+2026-09-02T17:15:51.855+08:00  INFO 21525 --- [interview-web] [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+2026-09-02T17:15:51.856+08:00  INFO 21525 --- [interview-web] [Thread-11] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Completed destruction of Publisher
+2026-09-02T17:15:51.856+08:00  INFO 21525 --- [interview-web] [Thread-15] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Completed destruction of HttpClient
+2026-09-02T17:15:51.856+08:00  INFO 21525 --- [interview-web] [Thread-5] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Start destroying ThreadPool
+2026-09-02T17:15:51.856+08:00  INFO 21525 --- [interview-web] [Thread-5] c.a.n.common.executor.ThreadPoolManager  : [ThreadPoolManager] Completed destruction of ThreadPool
+2026-09-02T17:15:51.856+08:00  INFO 21525 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
+2026-09-02T17:15:51.869+08:00  INFO 21525 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
+2026-09-02T17:16:01.879+08:00  INFO 21525 --- [interview-web] [SpringApplicationShutdownHook] c.a.c.n.r.NacosGracefulShutdownDelegate  : Nacos client graceful shutdown has been executed successfully. Graceful shutdown wait time is 10000
+2026-09-02T17:16:01.888+08:00  INFO 21525 --- [interview-web] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-02T17:16:01.893+08:00  INFO 21525 --- [interview-web] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-02T17:16:01.932+08:00  WARN 21525 --- [interview-web] [SpringApplicationShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Timed out while waiting for executor 'taskScheduler' to terminate

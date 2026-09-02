@@ -2,8 +2,21 @@
 server:
   shutdown: graceful
   # graceful=优雅停机；immediate=立即关闭（默认）
+  port: 8082
+
 
 spring:
+  application:
+    name: interview-web   # ✅服务名称，消费者调用就用这个名字，全局唯一
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: public   # default命名空间ID=public，填Namespace ID不是显示名称
+        group: DEFAULT_GROUP
+        ephemeral: true     # true=临时实例(AP)，程序停止自动剔除；绝大多数业务用true
+        #ip: 192.168.1.100 #多网卡机器手动指定注册内网IP
+
   api-docs:
     enabled: true   # 是否开启openapi文档
     path: /v3/api-docs
