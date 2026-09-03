@@ -37,6 +37,12 @@ dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign:5.0.3")
 	// Source: https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-loadbalancer
 	implementation("org.springframework.cloud:spring-cloud-starter-loadbalancer:5.0.2")
+	// Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
+	implementation("org.springframework.boot:spring-boot-starter-jdbc:4.1.0")
+	// Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+	implementation("com.mysql:mysql-connector-j:9.7.0")
+	// Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa:4.1.0")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

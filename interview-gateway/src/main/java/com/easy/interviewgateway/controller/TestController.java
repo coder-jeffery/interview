@@ -13,7 +13,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String test(){
-        return "打印参数：" + "响应时间:" + nacosBean.getTimeout() + " 标题:  " + nacosBean.getTitle();
+        return "打印参数：" + "响应时间:" + nacosBean.getTimeout() + " 标题:  " + nacosBean.getTitle() +" : " + nacosBean.getApp();
     }
 
     @GetMapping("/api/hello")
