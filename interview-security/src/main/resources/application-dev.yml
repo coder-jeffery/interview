@@ -1,0 +1,19 @@
+
+spring:
+  application:
+    name: interview-security
+  api-docs:
+    enabled: true   # 是否开启openapi文档
+    path: /v3/api-docs
+    swagger-ui:
+      enabled: true
+      path: /swagger-ui/index.html
+      operationsSorter: method  # 接口按http方法排序
+      tagsSorter: alpha         # tag按字母排序
+
+jwt:
+  secret: abcdefghijklmnopqabcdefghijklmnopqabcdefghijklmnopq
+  access-expire-minutes: 30
+
+server:
+  port: 8080
