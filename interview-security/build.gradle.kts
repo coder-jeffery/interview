@@ -25,6 +25,7 @@ dependencies {
 	implementation("org.bouncycastle:bcprov-jdk15to18:1.78.1")
 	// Spring Security OAuth2 资源服务器，解析JWT
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
+	implementation("org.springframework.boot:spring-boot-starter-oauth2-authorization-server")
 	// Source: https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.3")
 	// Spring Security

@@ -1,6 +1,7 @@
 package com.easy.interviewsecurity.controller;
 
 import com.easy.interviewsecurity.dto.JwtParseResponse;
+import com.easy.interviewsecurity.dto.LoginDTO;
 import com.easy.interviewsecurity.dto.ParseTokenRequest;
 import com.easy.interviewsecurity.utils.JwtUtil;
 import io.jsonwebtoken.Claims;
@@ -19,7 +20,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/jwt")
+@RequestMapping("/api")
 public class JwtController {
 
     private final JwtUtil jwtUtil;
@@ -28,15 +29,25 @@ public class JwtController {
         this.jwtUtil = jwtUtil;
     }
 
+    @PostMapping("/login")
+    public String login(@RequestBody LoginDTO dto) {
+        // 业务逻辑：查询数据库，BCrypt校验账号密码
+        // 校验成功生成jwt返回
+        return jwtUtil.generateAccessToken(1001L, dto.getUsername());
+    }
+
     /**
      * 由 OAuth2 资源服务器验签后，返回当前 Bearer token 中的账号信息。
      */
-    @GetMapping("/me")
+    @GetMapping("/jwt/me")
     public Map<String, Object> me(@AuthenticationPrincipal Jwt jwt) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("subject", jwt.getSubject());
+        body.put("issuer", jwt.getIssuer());
+        body.put("audience", jwt.getAudience());
         body.put("userId", jwt.getClaim("userId"));
         body.put("username", jwt.getClaim("username"));
+        body.put("preferredUsername", jwt.getClaim("preferred_username"));
         body.put("expiresAt", jwt.getExpiresAt());
         return body;
     }
@@ -44,7 +55,7 @@ public class JwtController {
     /**
      * 解析 JWT，返回签发时写入的账号信息。密码不会进入 token，因此解析结果不含密码。
      */
-    @PostMapping("/parse")
+    @PostMapping("/jwt/parse")
     public JwtParseResponse parse(@RequestBody(required = false) ParseTokenRequest request,
                                   @RequestHeader(value = "Authorization", required = false) String authHeader) {
         String token = resolveToken(request, authHeader);
