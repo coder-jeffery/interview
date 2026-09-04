@@ -1,0 +1,17 @@
+product_name = "codis-demo"
+product_auth = ""
+session_auth = ""
+admin_addr = "0.0.0.0:11080"
+proto_type = "tcp4"
+proxy_addr = "0.0.0.0:19000"
+jodis_name = "zookeeper"
+jodis_addr = "zookeeper:2181"
+jodis_timeout = "20s"
+jodis_compatible = false
+proxy_max_clients = 1000
+proxy_max_offheap_size = "128mb"
+proxy_heap_placeholder = "32mb"
+backend_ping_period = "5s"
+backend_primary_only = false
+backend_number_databases = 16
+session_break_on_failure = false

@@ -16,6 +16,12 @@ JVM：
     + 代表开启
     - 代表关闭
 
+服务注册发现：
+    AP：Eureka 无leader 30s client->server 90s  异步复制  客户端负载均衡 ｜ Ribbon 在消费端本地执行负载均衡算法
+    CP：Nacos K8S DNS 
+API网关：
+    SpringCloud Gateway 
+
 
             
         

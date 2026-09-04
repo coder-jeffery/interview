@@ -1,0 +1,128 @@
+# 3. Redis Cluster 官方集群（哈希槽分片）
+# 3 主 + 3 从，16384 个 slot。客户端需支持 MOVED/ASK 重定向。
+# 宿主机访问会因节点互相宣告容器 IP 而失败，请在容器网络里用 -c 模式。
+#
+# 启动：docker compose up -d
+# 验证：
+#   docker exec -it redis-c-node-1 redis-cli -c CLUSTER INFO
+#   docker exec -it redis-c-node-1 redis-cli -c CLUSTER NODES
+#   docker exec -it redis-c-node-1 redis-cli -c SET k1 v1
+
+name: redis-cluster
+
+x-node: &cluster-node
+  image: redis:7.4-alpine
+  command: >
+    redis-server
+    --bind 0.0.0.0
+    --protected-mode no
+    --port 6379
+    --cluster-enabled yes
+    --cluster-config-file nodes.conf
+    --cluster-node-timeout 5000
+    --appendonly yes
+  healthcheck:
+    test: ["CMD", "redis-cli", "ping"]
+    interval: 5s
+    timeout: 3s
+    retries: 10
+
+services:
+  redis-node-1:
+    <<: *cluster-node
+    container_name: redis-c-node-1
+    ports:
+      - "7001:6379"
+      - "17001:16379"
+    volumes:
+      - node1-data:/data
+
+  redis-node-2:
+    <<: *cluster-node
+    container_name: redis-c-node-2
+    ports:
+      - "7002:6379"
+      - "17002:16379"
+    volumes:
+      - node2-data:/data
+
+  redis-node-3:
+    <<: *cluster-node
+    container_name: redis-c-node-3
+    ports:
+      - "7003:6379"
+      - "17003:16379"
+    volumes:
+      - node3-data:/data
+
+  redis-node-4:
+    <<: *cluster-node
+    container_name: redis-c-node-4
+    ports:
+      - "7004:6379"
+      - "17004:16379"
+    volumes:
+      - node4-data:/data
+
+  redis-node-5:
+    <<: *cluster-node
+    container_name: redis-c-node-5
+    ports:
+      - "7005:6379"
+      - "17005:16379"
+    volumes:
+      - node5-data:/data
+
+  redis-node-6:
+    <<: *cluster-node
+    container_name: redis-c-node-6
+    ports:
+      - "7006:6379"
+      - "17006:16379"
+    volumes:
+      - node6-data:/data
+
+  cluster-init:
+    image: redis:7.4-alpine
+    container_name: redis-c-init
+    depends_on:
+      redis-node-1:
+        condition: service_healthy
+      redis-node-2:
+        condition: service_healthy
+      redis-node-3:
+        condition: service_healthy
+      redis-node-4:
+        condition: service_healthy
+      redis-node-5:
+        condition: service_healthy
+      redis-node-6:
+        condition: service_healthy
+    restart: "no"
+    command:
+      - /bin/sh
+      - -c
+      - |
+        state=$$(redis-cli -h redis-node-1 CLUSTER INFO | grep cluster_state | tr -d '\r')
+        if [ "$$state" = "cluster_state:ok" ]; then
+          echo "cluster already initialized"
+          exit 0
+        fi
+        echo "creating cluster..."
+        redis-cli --cluster create \
+          redis-node-1:6379 \
+          redis-node-2:6379 \
+          redis-node-3:6379 \
+          redis-node-4:6379 \
+          redis-node-5:6379 \
+          redis-node-6:6379 \
+          --cluster-replicas 1 \
+          --cluster-yes
+
+volumes:
+  node1-data:
+  node2-data:
+  node3-data:
+  node4-data:
+  node5-data:
+  node6-data:

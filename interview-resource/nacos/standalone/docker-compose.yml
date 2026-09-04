@@ -1,0 +1,51 @@
+# Nacos 单机（embedded Derby）
+# 注册 + 配置；本机联调用。控制台鉴权关闭，生产请开 NACOS_AUTH_*。
+#
+# 启动：docker compose up -d
+# 控制台：http://127.0.0.1:18080
+# 客户端：127.0.0.1:8848（gRPC 自动走 9848）
+# 健康检查：
+#   curl -s http://127.0.0.1:8848/nacos/v3/admin/core/state/readiness
+
+name: nacos-standalone
+
+services:
+  nacos:
+    image: nacos/nacos-server:v3.2.4
+    container_name: nacos-standalone
+    environment:
+      MODE: standalone
+      PREFER_HOST_MODE: hostname
+      TZ: Asia/Shanghai
+      JVM_XMS: 256m
+      JVM_XMX: 512m
+      NACOS_AUTH_ENABLE: "false"
+      NACOS_AUTH_CONSOLE_ENABLE: "false"
+      NACOS_AUTH_ADMIN_ENABLE: "false"
+      NACOS_AUTH_IDENTITY_KEY: serverIdentity
+      NACOS_AUTH_IDENTITY_VALUE: security
+      # Base64，解码后须 ≥32 字符；镜像启动校验用，本地可固定
+      NACOS_AUTH_TOKEN: VGhpc0lzTXlDdXN0b21TZWNyZXRLZXkwMTIzNDU2Nzg=
+    ports:
+      - "18080:8080" # 3.x 控制台（避开本机 user-service 的 8080）
+      - "8848:8848"  # HTTP OpenAPI / 客户端 server-addr
+      - "9848:9848"  # 客户端 gRPC（8848 + 1000）
+    volumes:
+      - nacos-data:/home/nacos/data
+      - nacos-logs:/home/nacos/logs
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "curl",
+          "-f",
+          "http://localhost:8848/nacos/v3/admin/core/state/readiness",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 40s
+
+volumes:
+  nacos-data:
+  nacos-logs:
