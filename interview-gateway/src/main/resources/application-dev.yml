@@ -1,0 +1,33 @@
+server:
+  port: 8081
+
+spring:
+  # 核心：导入nacos配置，refresh=true开启监听热更新
+  config:
+    import: nacos:application-dev.yml?refresh=true
+#  config:
+#    import: optional:nacos:instead
+  application:
+    name: interview-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: user-service-route
+              uri: http://127.0.0.1:8080  # 直连下游；lb://user-service 需 Eureka/Nacos + LoadBalancer
+              predicates:
+                - Path=/user/**        # 路径匹配：请求路径以 /user 开头命中
+              filters:
+                - StripPrefix=1         # 去掉第一层路径：/user/get → /get
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848  # ${spring.cloud.nacos.server-addr}
+        namespace: public  #写Namespace ID，不是显示名称；default命名空间直接填 public
+        group: DEFAULT_GROUP
+        ephemeral: true # 默认：临时实例 AP模式，绝大多数业务用这个
+
+app:
+  title: "来自nacos的配置"
+  timeout: 3000
+

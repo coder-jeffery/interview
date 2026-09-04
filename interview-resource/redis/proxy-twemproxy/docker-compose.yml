@@ -1,0 +1,82 @@
+# 4a. 代理分片：Twemproxy（nutcracker）
+# 客户端只连代理，代理按一致性哈希把 key 打到多台独立 Redis。
+# 无自动故障转移、不支持部分命令（KEYS/MULTI/pipeline 受限），现网已少用。
+#
+# 启动：docker compose up -d
+# 验证：
+#   redis-cli -p 22121 SET user:1 a
+#   redis-cli -p 22121 GET user:1
+# 看 key 落在哪台：
+#   docker exec -it redis-tp-1 redis-cli KEYS '*'
+#   docker exec -it redis-tp-2 redis-cli KEYS '*'
+#   docker exec -it redis-tp-3 redis-cli KEYS '*'
+
+name: redis-proxy-twemproxy
+
+services:
+  redis-1:
+    image: redis:7.4-alpine
+    container_name: redis-tp-1
+    command: redis-server --bind 0.0.0.0 --protected-mode no --appendonly yes
+    ports:
+      - "6381:6379"
+    volumes:
+      - redis1-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis-2:
+    image: redis:7.4-alpine
+    container_name: redis-tp-2
+    command: redis-server --bind 0.0.0.0 --protected-mode no --appendonly yes
+    ports:
+      - "6382:6379"
+    volumes:
+      - redis2-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis-3:
+    image: redis:7.4-alpine
+    container_name: redis-tp-3
+    command: redis-server --bind 0.0.0.0 --protected-mode no --appendonly yes
+    ports:
+      - "6383:6379"
+    volumes:
+      - redis3-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  twemproxy:
+    image: malexer/twemproxy:0.5.0
+    container_name: redis-tp-proxy
+    environment:
+      LISTEN_PORT: "22121"
+      REDIS_SERVERS: "redis-1:6379:1,redis-2:6379:1,redis-3:6379:1"
+      AUTO_EJECT_HOSTS: "false"
+      TIMEOUT: "2000"
+      SERVER_CONNECTIONS: "40"
+      PRECONNECT: "true"
+    ports:
+      - "22121:22121"
+    depends_on:
+      redis-1:
+        condition: service_healthy
+      redis-2:
+        condition: service_healthy
+      redis-3:
+        condition: service_healthy
+
+volumes:
+  redis1-data:
+  redis2-data:
+  redis3-data:

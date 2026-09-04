@@ -2,8 +2,49 @@
 server:
   shutdown: graceful
   # graceful=优雅停机；immediate=立即关闭（默认）
+  port: 8084
 
 spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/interview?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver‑class‑name: com.mysql.cj.jdbc.Driver
+    # HikariCP连接池配置（boot默认连接池）
+    hikari:
+      maximum‑pool‑size: 10      #最大连接数
+      minimum‑idle: 5            #最小空闲连接
+      idle‑timeout: 300000       #空闲连接超时
+      connection‑timeout: 30000  #获取连接超时
+  application:
+    name: interview-web   # ✅服务名称，消费者调用就用这个名字，全局唯一
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: public   # default命名空间ID=public，填Namespace ID不是显示名称
+        group: DEFAULT_GROUP
+        ephemeral: true     # true=临时实例(AP)，程序停止自动剔除；绝大多数业务用true
+        #ip: 192.168.1.100 #多网卡机器手动指定注册内网IP
+        # 无nacos服务 关闭注册
+        enabled: false
+
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+      retries: 3
+    consumer:
+      group-id: biz-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+    listener:
+      ack-mode: MANUAL_IMMEDIATE
+
   api-docs:
     enabled: true   # 是否开启openapi文档
     path: /v3/api-docs
@@ -17,6 +58,16 @@ spring:
     # 停机阶段最大等待超时，默认30s；建议根据业务P99耗时设置，如业务最长20s就设30‑40s
   aop:
     auto: true
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: Asia/Shanghai
 
 #app:
 #  schedule:
@@ -25,4 +76,18 @@ spring:
 
 task:
   cron: 0/10 * * * * ?
+
+camel:
+  springboot:
+    # 无web应用打开；web应用关闭
+    main‑run‑controller: false
+    trace: false
+  main:
+    # Java21 开启虚拟线程，Camel内部使用VirtualThread，高并发减少线程栈开销
+    virtual‑threads: true
+
+app:
+  camel:
+    csv-dir: ${user.dir}/data/csv
+    json-dir: ${user.dir}/data/json
 

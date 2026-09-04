@@ -1,6 +1,26 @@
-.DS_Store
+# 大二进制
+*.zip
+*.tar.gz
+*.rar
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+dataset/
+model_weights/
+
+# IDE
 .idea/
-*.iml
 .vscode/
+*.iml
+
+# gradle/maven
+build/
 target/
-*.class
+*.log
+
+# java heap dump
+*.hprof
+# jvm crash dump
+*.mdmp

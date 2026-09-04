@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  kafka:
+    image: apache/kafka:3.9.0 # 使用较新的稳定版本
+    container_name: kafka
+    environment:
+      # 1. 设置节点唯一ID
+      - KAFKA_NODE_ID=1
+      # 2. 设置节点角色：既是broker也是controller
+      - KAFKA_PROCESS_ROLES=broker,controller
+      # 3. 定义controller投票者列表
+      - KAFKA_CONTROLLER_QUORUM_VOTERS=1@kafka:9093
+      # 4. 配置监听器：PLAINTEXT用于业务通信，CONTROLLER用于内部元数据同步
+      - KAFKA_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
+      # 5. 告诉客户端通过什么地址连接（这里指向容器名，供其他容器使用）
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
+      # 6. 监听器协议映射
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      # 7. 设置broker间通信的监听器名称
+      - KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT
+      # 8. 设置controller监听器名称
+      - KAFKA_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      # 9. 单节点配置：副本因子设为1
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+      - KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR=1
+      - KAFKA_TRANSACTION_STATE_LOG_MIN_ISR=1
+    ports:
+      # 将容器的9092端口（业务端口）映射到宿主机，如果不需要外部连接可以注释掉
+      - "9092:9092"
+    volumes:
+      # 数据持久化
+      - kafka_data:/var/lib/kafka/data
+
+volumes:
+  kafka_data:

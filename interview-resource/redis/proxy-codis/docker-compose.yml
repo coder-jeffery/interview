@@ -1,0 +1,119 @@
+# 4b. 代理分片：Codis（Dashboard + Proxy + Server + ZooKeeper）
+# 客户端连 Proxy（19000），Dashboard 管 1024 个 slot 的分配与迁移。
+# Codis 已停止演进，仅作面试对照；新项目用 Redis Cluster。
+#
+# 启动：docker compose up -d
+# 管理台：http://localhost:9090
+# 客户端：redis-cli -p 19000
+# 验证：docker exec -it redis-cd-proxy redis-cli -p 19000 SET k1 v1
+
+name: redis-proxy-codis
+
+x-codis: &codis
+  image: osmeteor/codis:release3.2
+  working_dir: /codis
+
+services:
+  zookeeper:
+    image: zookeeper:3.8
+    container_name: redis-cd-zk
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_TICK_TIME: 2000
+    healthcheck:
+      test: ["CMD-SHELL", "zkServer.sh status || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  dashboard:
+    <<: *codis
+    container_name: redis-cd-dashboard
+    command: ["codis-dashboard", "-c", "/codis/config/dashboard.toml"]
+    volumes:
+      - ./conf/dashboard.toml:/codis/config/dashboard.toml:ro
+    ports:
+      - "18080:18080"
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+
+  proxy:
+    <<: *codis
+    container_name: redis-cd-proxy
+    command: ["codis-proxy", "-c", "/codis/config/proxy.toml"]
+    volumes:
+      - ./conf/proxy.toml:/codis/config/proxy.toml:ro
+    ports:
+      - "19000:19000"
+      - "11080:11080"
+    depends_on:
+      - dashboard
+
+  codis-server-1:
+    <<: *codis
+    container_name: redis-cd-server-1
+    command: ["codis-server", "--bind", "0.0.0.0", "--protected-mode", "no", "--port", "6379", "--appendonly", "yes"]
+    ports:
+      - "6391:6379"
+    volumes:
+      - server1-data:/data
+
+  codis-server-2:
+    <<: *codis
+    container_name: redis-cd-server-2
+    command: ["codis-server", "--bind", "0.0.0.0", "--protected-mode", "no", "--port", "6379", "--appendonly", "yes"]
+    ports:
+      - "6392:6379"
+    volumes:
+      - server2-data:/data
+
+  fe:
+    <<: *codis
+    container_name: redis-cd-fe
+    command: ["codis-fe", "--ncpu=1", "--zookeeper=zookeeper:2181", "--listen=0.0.0.0:9090"]
+    ports:
+      - "9090:9090"
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+
+  cluster-init:
+    <<: *codis
+    container_name: redis-cd-init
+    restart: "no"
+    depends_on:
+      - dashboard
+      - proxy
+      - codis-server-1
+      - codis-server-2
+    command:
+      - /bin/sh
+      - -c
+      - |
+        echo "waiting dashboard..."
+        i=0
+        until wget -q -O /dev/null http://dashboard:18080/api/topom 2>/dev/null; do
+          i=$$((i+1))
+          if [ $$i -gt 30 ]; then
+            echo "dashboard not ready"
+            exit 1
+          fi
+          sleep 2
+        done
+        set +e
+        codis-admin --dashboard=dashboard:18080 --create-proxy -x proxy:11080
+        codis-admin --dashboard=dashboard:18080 --create-group --gid=1
+        codis-admin --dashboard=dashboard:18080 --group-add --gid=1 --addr=codis-server-1:6379
+        codis-admin --dashboard=dashboard:18080 --create-group --gid=2
+        codis-admin --dashboard=dashboard:18080 --group-add --gid=2 --addr=codis-server-2:6379
+        codis-admin --dashboard=dashboard:18080 --slot-action --create-range --beg=0 --end=511 --gid=1
+        codis-admin --dashboard=dashboard:18080 --slot-action --create-range --beg=512 --end=1023 --gid=2
+        echo "codis init done"
+        exit 0
+
+volumes:
+  server1-data:
+  server2-data:
