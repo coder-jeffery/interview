@@ -14,5 +14,4 @@ public class InterviewSecurityApplication {
         SpringApplication.run(InterviewSecurityApplication.class, args);
         log.info("interview security >>> use times: {}", System.currentTimeMillis() - start);
     }
-
 }

@@ -26,6 +26,8 @@ spring:
         group: DEFAULT_GROUP
         ephemeral: true     # true=临时实例(AP)，程序停止自动剔除；绝大多数业务用true
         #ip: 192.168.1.100 #多网卡机器手动指定注册内网IP
+        # 无nacos服务 关闭注册
+        enabled: false
 
   api-docs:
     enabled: true   # 是否开启openapi文档
@@ -48,4 +50,13 @@ spring:
 
 task:
   cron: 0/10 * * * * ?
+
+camel:
+  springboot:
+    # 无web应用打开；web应用关闭
+    main‑run‑controller: false
+    trace: false
+  main:
+    # Java21 开启虚拟线程，Camel内部使用VirtualThread，高并发减少线程栈开销
+    virtual‑threads: true
 

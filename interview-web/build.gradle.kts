@@ -19,8 +19,13 @@ repositories {
 	mavenCentral()
 }
 
+// 在build脚本最上层
+val camelVersion = "4.8.0"
+
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	// 必须要有这个
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	// Source: https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2
@@ -43,6 +48,7 @@ dependencies {
 	implementation("com.mysql:mysql-connector-j:9.7.0")
 	// Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa:4.1.0")
+	implementation("org.apache.camel.springboot:camel-spring-boot-starter:${camelVersion}")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
