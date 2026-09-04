@@ -2,7 +2,7 @@
 server:
   shutdown: graceful
   # graceful=优雅停机；immediate=立即关闭（默认）
-  port: 8082
+  port: 8084
 
 spring:
   datasource:
@@ -29,6 +29,22 @@ spring:
         # 无nacos服务 关闭注册
         enabled: false
 
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+      retries: 3
+    consumer:
+      group-id: biz-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+    listener:
+      ack-mode: MANUAL_IMMEDIATE
+
   api-docs:
     enabled: true   # 是否开启openapi文档
     path: /v3/api-docs
@@ -42,6 +58,16 @@ spring:
     # 停机阶段最大等待超时，默认30s；建议根据业务P99耗时设置，如业务最长20s就设30‑40s
   aop:
     auto: true
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: Asia/Shanghai
 
 #app:
 #  schedule:
@@ -59,4 +85,9 @@ camel:
   main:
     # Java21 开启虚拟线程，Camel内部使用VirtualThread，高并发减少线程栈开销
     virtual‑threads: true
+
+app:
+  camel:
+    csv-dir: ${user.dir}/data/csv
+    json-dir: ${user.dir}/data/json
 

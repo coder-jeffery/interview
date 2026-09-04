@@ -49,6 +49,10 @@ dependencies {
 	// Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa:4.1.0")
 	implementation("org.apache.camel.springboot:camel-spring-boot-starter:${camelVersion}")
+	implementation("org.apache.camel.springboot:camel-csv-starter:${camelVersion}")
+	implementation("org.apache.camel.springboot:camel-bindy-starter:${camelVersion}")
+	implementation("org.apache.camel.springboot:camel-jackson-starter:${camelVersion}")
+	implementation("org.apache.kafka:kafka-clients:3.9.0")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -59,4 +63,12 @@ dependencies {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+
+// 强制全局kafka‑clients版本，防止传递依赖拉低版本
+configurations.all {
+	resolutionStrategy {
+		force("org.apache.kafka:kafka-clients:3.9.0")
+	}
 }
