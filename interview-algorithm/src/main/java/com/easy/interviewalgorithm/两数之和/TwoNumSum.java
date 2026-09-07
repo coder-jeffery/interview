@@ -8,9 +8,9 @@ public class TwoNumSum {
     public static void main(String[] args) {
         int[] nums = {2,7,10,11,16,18};
         int target = 9;
-        int[] res  = twoNumSum(nums, target);
-//        int[] res  = twoNumSum2(nums, target);
-        System.out.println(Arrays.toString(res));
+        int[] res1  = twoNumSum(nums, target);
+        int[] res2  = twoNumSum2(nums, target);
+        System.out.println(Arrays.toString(res1) + "\n" + Arrays.toString(res2));
     }
 
     /**
@@ -34,12 +34,14 @@ public class TwoNumSum {
      * */
     public static int[] twoNumSum2(int[] nums, int target){
         Map<Integer, Integer> map  = new HashMap<>();
-        for(int i=0; i < nums.length; i++){
-            int comp  = target - nums[i];
-            if(!map.containsKey(comp)){
-                map.put( nums[i], i);
+
+        for (int i = 0; i < nums.length; i++) {
+            int num  = nums[i];
+            int result  = target - num;
+            if(map.containsKey(result)){
+                return new int[]{map.get(result), i};
             }
-            return new int[]{map.get(comp), i};
+            map.put(num, i);
         }
         return new int[]{};
     }
