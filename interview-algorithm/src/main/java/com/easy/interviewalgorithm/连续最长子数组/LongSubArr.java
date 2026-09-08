@@ -5,7 +5,7 @@ public class LongSubArr {
         /**
          * 连续最长子数组
          * */
-        int[] nums = {1,3,5,4,7,10,9,2};
+        int[] nums = {1,2,3,4,5,6,10,9,8};
         int res  = longsumarr(nums);
         System.out.println(res);
     }
