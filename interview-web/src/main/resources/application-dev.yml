@@ -4,7 +4,25 @@ server:
   # graceful=优雅停机；immediate=立即关闭（默认）
   port: 8084
 
+
 spring:
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: "" # 有密码就填写
+      database: 0
+      timeout: 2000ms # 读写超时
+      connect-timeout: 1000ms
+      # Lettuce连接池配置
+      lettuce:
+        pool:
+          enabled: true
+          max-active: 8
+          max-idle: 8
+          min-idle: 2
+          max-wait: 5000ms
+
 #  enabled: false
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/interview?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai

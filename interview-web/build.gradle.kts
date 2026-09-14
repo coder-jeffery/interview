@@ -48,6 +48,12 @@ dependencies {
 	implementation("com.mysql:mysql-connector-j:9.7.0")
 	// Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa:4.1.0")
+
+	// redis starter，内置Lettuce
+	implementation("org.springframework.boot:spring-boot-starter-data-redis")
+	// 启用Lettuce连接池必须引入 commons-pool2
+	implementation("org.apache.commons:commons-pool2")
+
 	implementation("org.apache.camel.springboot:camel-spring-boot-starter:${camelVersion}")
 	implementation("org.apache.camel.springboot:camel-csv-starter:${camelVersion}")
 	implementation("org.apache.camel.springboot:camel-bindy-starter:${camelVersion}")
