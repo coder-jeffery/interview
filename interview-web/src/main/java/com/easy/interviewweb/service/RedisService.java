@@ -1,6 +1,7 @@
 package com.easy.interviewweb.service;
 
 import com.easy.interviewweb.dto.UserDTO;
+import com.easy.interviewweb.exception.BusinessException;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -27,11 +28,11 @@ public class RedisService {
 
     public UserDTO userInfo(String phone){
         if (!StringUtils.hasText(phone)) {
-//            return ResponseEntity.badRequest().build();
+            throw  new BusinessException(400, "verify error message");
         }
         String json = stringRedisTemplate.opsForValue().get(userPhoneKey(phone));
         if (!StringUtils.hasText(json)) {
-//            return ResponseEntity.notFound().build();
+            throw  new BusinessException(400, "verify error message");
         }
         return objectMapper.readValue(json, UserDTO.class);
     }
