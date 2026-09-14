@@ -110,3 +110,7 @@ app:
     csv-dir: ${user.dir}/data/csv
     json-dir: ${user.dir}/data/json
 
+ext:
+  api:
+    security: http://localhost:8080/api/login
+

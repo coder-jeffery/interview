@@ -26,6 +26,8 @@ spring:
         namespace: public  #写Namespace ID，不是显示名称；default命名空间直接填 public
         group: DEFAULT_GROUP
         ephemeral: true # 默认：临时实例 AP模式，绝大多数业务用这个
+      config:
+        enabled: false
 
 app:
   title: "来自nacos的配置"
