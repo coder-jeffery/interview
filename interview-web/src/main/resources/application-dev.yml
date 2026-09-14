@@ -5,6 +5,7 @@ server:
   port: 8084
 
 spring:
+#  enabled: false
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/interview?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root

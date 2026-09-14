@@ -1,6 +1,8 @@
 package com.easy.interviewweb.controller;
 
 import com.easy.interviewweb.service.EmployeeService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +12,8 @@ public class EmployeeController {
 
     @Autowired
     EmployeeService employeeService;
+
+    Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
     /**
      * #强制ASM（默认）
@@ -22,6 +26,7 @@ public class EmployeeController {
     @GetMapping("/fastjson")
     public String fastjson() {
         String result = employeeService.fastjson();
+        logger.info("record log message: {}",result);
         return result;
     }
 

@@ -27,4 +27,9 @@ public class UserController {
     public User user(@Valid @RequestBody UserDTO userDto){
         return userService.insertUser(userDto);
     }
+
+    @PostMapping("/enhance/user")
+    public int enhanceUser(@Valid @RequestBody UserDTO userDto){
+        return userService.enhanceInsert(userDto);
+    }
 }

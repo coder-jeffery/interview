@@ -3,6 +3,7 @@ package com.easy.interviewweb.service;
 import com.easy.interviewweb.dto.UserDTO;
 import com.easy.interviewweb.entity.User;
 import com.easy.interviewweb.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,5 +33,12 @@ public class UserService {
                 .updateTime(LocalDateTime.now())
                 .build();
         return userRepository.save(entity);
+    }
+
+    @Transactional
+    public int enhanceInsert(UserDTO userDto){
+        insertUser(userDto);
+        int a  = 1/0;
+        return a;
     }
 }
