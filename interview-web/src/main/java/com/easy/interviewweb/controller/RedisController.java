@@ -1,35 +1,32 @@
 package com.easy.interviewweb.controller;
 
 import com.easy.interviewweb.dto.UserDTO;
-import jakarta.annotation.Resource;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.*;
-import tools.jackson.databind.ObjectMapper;
+import com.easy.interviewweb.service.RedisService;
+import jakarta.validation.Valid;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Slf4j
 @RestController
 public class RedisController {
 
-    @Resource
-    StringRedisTemplate stringRedisTemplate;
+    private final RedisService redisService;
 
-    @Autowired
-    ObjectMapper objectMapper;
-
-    @GetMapping("/redis")
-    public Object userInfo(@RequestParam("phone") String phone){
-        return  stringRedisTemplate.opsForValue().get(phone);
+    public RedisController(RedisService redisService) {
+        this.redisService = redisService;
     }
 
+    @GetMapping("/redis")
+    public ResponseEntity<UserDTO> userInfo(@RequestParam("phone") String phone) {
+        UserDTO userDTO = redisService.userInfo(phone);
+        return ResponseEntity.ok(userDTO);
+    }
 
     @PostMapping("/redis")
-    public void user(@RequestBody UserDTO userDto){
-        long start  = System.currentTimeMillis();
-        log.info("redis set start");
-        stringRedisTemplate.opsForValue().set(!StringUtils.isEmpty(userDto.getPhone()) ? userDto.getPhone() : "temp_key", objectMapper.writeValueAsString(userDto));
-        log.info("redis set end , use time: {}", System.currentTimeMillis() - start);
+    public ResponseEntity<UserDTO> user(@Valid @RequestBody UserDTO userDto) {
+        return ResponseEntity.ok(redisService.save(userDto));
     }
 }

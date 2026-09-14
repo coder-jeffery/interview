@@ -28,6 +28,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	// 必须要有这个
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 	// Source: https://mvnrepository.com/artifact/com.alibaba.fastjson2/fastjson2
 	implementation("com.alibaba.fastjson2:fastjson2:2.0.64")
 	// Source: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind

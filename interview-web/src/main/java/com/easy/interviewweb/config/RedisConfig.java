@@ -18,6 +18,7 @@ public class RedisConfig {
         StringRedisSerializer stringSerializer = new StringRedisSerializer();
         GenericJacksonJsonRedisSerializer jsonSerializer = GenericJacksonJsonRedisSerializer.builder().build();
 
+        template.setDefaultSerializer(jsonSerializer);
         template.setKeySerializer(stringSerializer);
         template.setValueSerializer(jsonSerializer);
         template.setHashKeySerializer(stringSerializer);
