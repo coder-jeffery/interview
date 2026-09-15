@@ -46,6 +46,9 @@ dependencies {
 	// Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-jdbc
 	implementation("org.springframework.boot:spring-boot-starter-jdbc:4.1.0")
 	// Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j
+
+	// Druid SpringBoot4 starter
+	implementation("com.alibaba:druid-spring-boot-4-starter:1.2.28")
 	implementation("com.mysql:mysql-connector-j:9.7.0")
 	// Source: https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa:4.1.0")

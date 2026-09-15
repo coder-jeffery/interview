@@ -5,7 +5,53 @@ server:
   port: 8084
 
 
+
 spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/interview?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+    druid:
+      # 连接池基础参数
+      initial-size: 5
+      min-idle: 5
+      max-active: 20  # 最大连接数
+      max-wait: 60000
+
+      # 空闲连接检测
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+
+      # MySQL 关闭PSCache，Oracle才开启
+      pool-prepared-statements: false
+
+      # 过滤器 stat:SQL监控 wall:防火墙 slf4j:日志输出
+      filters: stat,wall,slf4j
+#      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=1000
+
+      # Druid监控面板（Web项目才生效）
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: 123456
+        allow: 127.0.0.1
+        reset-enable: false
+
+      # web请求监控，关联SQL
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+
+
+#spring:
   data:
     redis:
       host: 127.0.0.1
@@ -24,17 +70,17 @@ spring:
           max-wait: 5000ms
 
 #  enabled: false
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3306/interview?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
-    username: root
-    password: 123456
-    driver‑class‑name: com.mysql.cj.jdbc.Driver
-    # HikariCP连接池配置（boot默认连接池）
-    hikari:
-      maximum‑pool‑size: 10      #最大连接数
-      minimum‑idle: 5            #最小空闲连接
-      idle‑timeout: 300000       #空闲连接超时
-      connection‑timeout: 30000  #获取连接超时
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/interview?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: 123456
+#    driver‑class‑name: com.mysql.cj.jdbc.Driver
+#    # HikariCP连接池配置（boot默认连接池）
+#    hikari:
+#      maximum‑pool‑size: 10      #最大连接数
+#      minimum‑idle: 5            #最小空闲连接
+#      idle‑timeout: 300000       #空闲连接超时
+#      connection‑timeout: 30000  #获取连接超时
   application:
     name: interview-web   # ✅服务名称，消费者调用就用这个名字，全局唯一
   cloud:

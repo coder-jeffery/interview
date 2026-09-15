@@ -17,7 +17,6 @@ public class ExtApiService {
         this.restTemplate = restTemplate;
     }
 
-
     public String login(LoginDTO loginDTO){
         return restTemplate.postForEntity(extApiSecurity, loginDTO, String.class).getBody();
     }
