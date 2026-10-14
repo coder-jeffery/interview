@@ -1,0 +1,16 @@
+
+spring:
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      database: 0    # 0~15，按 Redis 实例配置
+
+distributed-lock:
+  enabled: true
+  prefix: dlock                 # Redis key 前缀，实际 key 为 dlock:你的锁名
+  default-wait-time: 3s         # 拿不到锁时最多等多久
+  default-lease-time: 30s       # 锁的 TTL；看门狗会按 lease/3 续期
+  watchdog-enabled: true
+server:
+  port: 8080
