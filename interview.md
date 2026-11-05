@@ -22,6 +22,18 @@ JVM：
 API网关：
     SpringCloud Gateway 
 
+# 先看是谁
+lsof -nP -iTCP:8080 -sTCP:LISTEN | grep java
+
+# 优雅杀
+lsof -nP -tiTCP:8080 -sTCP:LISTEN | grep java | xargs kill
+
+# 杀不掉就强杀
+lsof -nP -tiTCP:8080 -sTCP:LISTEN | grep java | xargs kill -9
+
+lsof -ti tcp:3000 -sTCP:LISTEN | xargs kill -9 2>/dev/null
+
+
 
             
         

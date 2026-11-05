@@ -71,3 +71,9 @@
 - 默认运行时按 **Java 21 LTS** 讲，并注明与 8/11/17 的差异；**Java 25** 作为最新 LTS 补充。
 - 集合/并发默认按 **HotSpot + OpenJDK** 实现讨论，不把规范与实现混为一谈。
 - 不保证覆盖所有边角 API。目标是：**面试能讲清楚，追问能接住，项目能对上。**
+
+# 终端 1
+cd interview-api && ./gradlew bootRun
+
+# 终端 2（先停掉再开）
+cd interview-ui && npm run dev

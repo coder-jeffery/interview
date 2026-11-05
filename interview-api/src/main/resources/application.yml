@@ -23,6 +23,23 @@ springdoc:
     tags-sorter: alpha
     operations-sorter: alpha
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+      probes:
+        enabled: true
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: 用户查询 API（SQLite）
+
 server:
   forward-headers-strategy: native
   servlet:
