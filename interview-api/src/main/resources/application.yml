@@ -1,0 +1,30 @@
+
+# application.yml
+#spring:
+#  web:
+#    cors:
+#      enabled: false
+
+spring:
+  datasource:
+    url: jdbc:sqlite:./data/interview-api.db
+    driver-class-name: org.sqlite.JDBC
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+
+server:
+  forward-headers-strategy: native
+  servlet:
+#    context-path: /api
+    context-path: /interview-api

@@ -20,7 +20,10 @@ repositories {
 }
 
 dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
+    implementation("org.xerial:sqlite-jdbc:3.49.1.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.2.0")
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
